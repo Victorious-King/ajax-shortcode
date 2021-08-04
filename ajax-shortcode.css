@@ -1,0 +1,46 @@
+.toggle-plugin {
+    margin:0 0 0 2rem;
+    position: relative;
+    display: inline-block;
+    width: 6rem;
+    height: 3rem;
+}
+
+.toggle-plugin input {
+    display: none;
+}
+
+.roundbutton-plugin {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #c3c4c7;
+    display: block;
+    transition: all 0.3s;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.roundbutton-plugin:before {
+    position: absolute;
+    content: "";
+    height: 2.2rem;
+    width: 2.2rem;
+    border-radius: 100%;
+    display: block;
+    left: 0.4rem;
+    bottom: 0.4rem;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+input.input-plugin:checked + .roundbutton-plugin {
+    background-color: #006E48;
+}
+
+input.input-plugin:checked + .roundbutton-plugin:before  {
+    transform: translate(2.6rem, 0);
+}
